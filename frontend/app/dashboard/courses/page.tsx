@@ -38,9 +38,10 @@ export default function CoursesPage() {
 
   const toggleFilter = (filter: string) => {
     setExpandedFilters((prev) => ({
-      ...prev,
-      [filter]: !prev[filter],
-    }))
+  ...prev,
+  [filter]: !prev[filter as keyof typeof prev],
+}));
+
   }
 
   const handlePriceChange = (price: string) => {
