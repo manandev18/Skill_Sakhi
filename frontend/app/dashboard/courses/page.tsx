@@ -11,7 +11,7 @@ export default function CoursesPage() {
   const [showBanner, setShowBanner] = useState(true)
   const [currentSlide, setCurrentSlide] = useState(0)
   const [currentPage, setCurrentPage] = useState(1)
-  const [expandedFilters, setExpandedFilters] = useState({
+  const [expandedFilters, setExpandedFilters] = useState<{ [key: string]: boolean }>({
     programs: true,
     price: true,
     school: false,
@@ -794,3 +794,4 @@ export default function CoursesPage() {
     
   )
 }
+
